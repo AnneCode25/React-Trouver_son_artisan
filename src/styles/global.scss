@@ -11,3 +11,12 @@ header {
 body {
         background-color: aquamarine;
 }
+
+footer { 
+        .list-inline-item a {
+                text-decoration: none;
+        }
+        .footer-link {
+                text-decoration: none;
+              }
+}
