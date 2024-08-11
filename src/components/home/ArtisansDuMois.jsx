@@ -1,8 +1,14 @@
 import artisansData from "../../data/datas.json";
 import StarRating from "../commons/StarRating.jsx";
+import { useNavigate } from "react-router-dom";
 
 const ArtisansDuMois = () => {
   const topArtisans = artisansData.filter((artisan) => artisan.top);
+  const navigate = useNavigate();
+  const handleArtisanClick = (artisanId) => {
+    navigate(`/artisan/${String(artisanId)}`);
+  };
+
   return (
     <section className="artisans-du-mois py-5">
       <div className="container">
@@ -10,7 +16,10 @@ const ArtisansDuMois = () => {
         <div className="row">
           {topArtisans.map((artisan) => (
             <div key={artisan.id} className="col-md-4 mb-4">
-              <div className="card">
+              <div
+                className="card"
+                onClick={() => handleArtisanClick(artisan.id)}
+              >
                 <div className="card-body">
                   <h5 className="card-title">{artisan.name}</h5>
                   <p className="card-text">{artisan.specialty}</p>
