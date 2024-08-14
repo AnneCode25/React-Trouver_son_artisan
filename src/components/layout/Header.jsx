@@ -71,16 +71,16 @@ const Header = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <NavLinkActive to="/batiment">Bâtiment</NavLinkActive>
+                <NavLinkActive to="/categorie/batiment">Bâtiment</NavLinkActive>
               </li>
               <li className="nav-item">
-                <NavLinkActive to="/services">Services</NavLinkActive>
+                <NavLinkActive to="/categorie/services">Services</NavLinkActive>
               </li>
               <li className="nav-item">
-                <NavLinkActive to="/fabrication">Fabrication</NavLinkActive>
+                <NavLinkActive to="/categorie/fabrication">Fabrication</NavLinkActive>
               </li>
               <li className="nav-item">
-                <NavLinkActive to="/alimentation">Alimentation</NavLinkActive>
+                <NavLinkActive to="/categorie/alimentation">Alimentation</NavLinkActive>
               </li>
             </ul>
             {isDesktop && (
