@@ -41,7 +41,7 @@ const EmailForm = () => {
     <form onSubmit={handleSubmit}>
       <input
         type="text"
-        name=" name"
+        name="name"
         placeholder="Votre nom"
         value={formData.name}
         onChange={handleInputChange}
