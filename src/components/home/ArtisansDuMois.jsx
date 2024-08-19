@@ -12,7 +12,7 @@ const ArtisansDuMois = () => {
   return (
     <section className="artisans-du-mois py-5">
       <div className="container">
-        <h2 className="text-center mb-5">Artisans du Mois</h2>
+        <h2 className="mb-5 titre-homepage">Artisans du Mois</h2>
         <div className="row">
           {topArtisans.map((artisan) => (
             <div key={artisan.id} className="col-md-4 mb-4">

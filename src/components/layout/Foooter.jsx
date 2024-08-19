@@ -23,7 +23,7 @@ const Footer = () => (
               </p>
               <p className="mb-0">
                 <FontAwesomeIcon icon={faPhone} className="me-2" />
-                <a href="tel:+33426734000" className="text-dark footer-link">+33 (0)4 26 73 40 00</a>
+                <a href="tel:+33426734000" className="footer-link">+33 (0)4 26 73 40 00</a>
               </p>
             </address>
           </div>

@@ -30,21 +30,32 @@ header {
 footer {
   background-color: $color-blue;
 
-  .list-inline-item a {
-    text-decoration: none;
+  svg, h5, p, a, hr {
+    color: white !important;
   }
+
+  h5 {
+    font-size: 1rem;
+    font-family: $font-title;
+  }
+
+  .list-inline-item a, li {
+    text-decoration: none;
+    color: $background-color !important;
+  }
+
   .footer-link {
     text-decoration: none;
   }
   .c-footer { 
     margin-top:3rem;
+
   }
   .c-footer_wrapper {
     position: relative;
   z-index: 1;
   padding-top: 9rem;
   padding-bottom: 1rem;
-  color: #fff;
   }
   .c-footer_wrapper::before {
     position: absolute;
@@ -69,4 +80,46 @@ footer {
   border-left: 3.2rem solid rgba(0,0,0,0);
   }
 
+}
+// Page d'accueil
+.banner {
+  background-image: url("../assets/images/accueil.png");
+  background-size: cover;
+  background-position: center bottom;
+  min-height: 20vh;
+  position: relative;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+/* Banner Desktop */
+@media screen and (min-width: 1024px) {
+  .banner {
+    height: 50vh;
+    background-position: center 80%;
+
+  }
+}
+
+.titre-homepage {
+  font-size: 1.5rem;
+  background-color: $color-red;
+  color: white;
+  padding: 1.2rem;
+  position: relative; /* Ajout important */
+  display: inline-block; /* Pour que le titre ne prenne que la largeur nécessaire */
+}
+
+.titre-homepage::before {
+  content: "";
+  position: absolute;
+  top: 0.5rem; /* Ajustez cette valeur pour positionner le tiret */
+  left: 1rem; /* Aligne avec le padding gauche du titre */
+  width: 2rem;
+  height: 0.4rem; /* Réduit la hauteur pour un tiret plus fin */
+  background-color: white;
+}
+
+.how-it-works {
+  padding-bottom: 0rem !important;
 }

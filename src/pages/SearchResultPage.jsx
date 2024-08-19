@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useLocation, Link, useNavigate } from "react-router-dom";
 import StarRating from "../components/commons/StarRating.jsx";
+import Layout from "../components/layout/Layout.jsx"
 
 // Importez vos données JSON ici
 import data from "../data/datas.json";
@@ -30,6 +31,7 @@ const SearchResultPage = () => {
   };
 
   return (
+    <Layout>
     <div className="container mt-4">
       <h1 className="mb-4">Recherche</h1>
       <h2 className="h4 mb-3">Recherche par mot clé</h2>
@@ -67,6 +69,7 @@ const SearchResultPage = () => {
         Retour à l&apos;accueil
       </Link>
     </div>
+    </Layout>
   );
 };
 
