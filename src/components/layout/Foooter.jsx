@@ -4,9 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 const Footer = () => (
-    <footer className="bg-light text-dark py-4">
-      <div className="container">
-        <div className="row align-items-center mb-4">
+    <footer className="py-0 c-footer" role="contentinfo">
+      <div className="container c-footer_wrapper">
+        <div className="row align-items-center mb-4 c-footer_top">
           {/* Logo de la région */}
           <div className="col-md-4 mb-3 mb-md-0">
             <img src={LogoRegion} alt="Logo Région Auvergne-Rhône-Alpes" className="img-fluid" style={{maxWidth: '200px'}} />
@@ -14,7 +14,7 @@ const Footer = () => (
           
           {/* Informations de contact */}
           <div className="col-md-8">
-            <h5>Contactez-nous</h5>
+            <h5>Lyon</h5>
             <address className="mb-0">
               <p className="mb-1">
                 <FontAwesomeIcon icon={faMapMarkerAlt} className="me-2" />
@@ -28,14 +28,13 @@ const Footer = () => (
             </address>
           </div>
         </div>
-
+        <div className="c-footer_bottom">
         {/* Ligne de séparation */}
         <hr className="my-4" />
 
         {/* Mentions légales */}
-        <div className="row">
-          <div className="col-12">
-            <ul className="list-inline text-center mb-0">
+        <nav className="c-footer_nav">
+            <ul className="list-inline text-center mb-3">
               <li className="list-inline-item"><Link to="/mentions-legales" className="text-dark">Mentions légales</Link></li>
               <li className="list-inline-item">•</li>
               <li className="list-inline-item"><Link to="/donnees-personnelles" className="text-dark">Données personnelles</Link></li>
@@ -44,16 +43,14 @@ const Footer = () => (
               <li className="list-inline-item">•</li>
               <li className="list-inline-item"><Link to="/cookies" className="text-dark">Cookies</Link></li>
             </ul>
-          </div>
-        </div>
+        </nav>
 
         {/* Copyright */}
-        <div className="row mt-3">
-          <div className="col-12 text-center">
+          <div className="text-center">
             <p className="small mb-0">© {new Date().getFullYear()} Trouve ton artisan. Tous droits réservés.</p>
           </div>
         </div>
-      </div>
+        </div>
     </footer>
   );
 

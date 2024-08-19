@@ -1,22 +1,72 @@
-header { 
-        .search:hover {
-                cursor: pointer;
-        }
-
-        .search {
-                padding-right: 1rem     ;
-        }
-} 
+@import "fonts";
+@import "colors";
 
 body {
-        background-color: aquamarine;
+  font-family: $font-primary;
+  background-color: $background-color;
+  color: $color-texte;
 }
 
-footer { 
-        .list-inline-item a {
-                text-decoration: none;
-        }
-        .footer-link {
-                text-decoration: none;
-              }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-title;
+  color: $color-title;
+}
+
+header {
+  .search:hover {
+    cursor: pointer;
+  }
+
+  .search {
+    padding-right: 1rem;
+  }
+}
+
+footer {
+  background-color: $color-blue;
+
+  .list-inline-item a {
+    text-decoration: none;
+  }
+  .footer-link {
+    text-decoration: none;
+  }
+  .c-footer { 
+    margin-top:3rem;
+  }
+  .c-footer_wrapper {
+    position: relative;
+  z-index: 1;
+  padding-top: 9rem;
+  padding-bottom: 1rem;
+  color: #fff;
+  }
+  .c-footer_wrapper::before {
+    position: absolute;
+  top: -1rem;
+  right: 0;
+  left: 0;
+  height: 6rem;
+  content: "";
+  border-radius: 0 0 10rem 10rem;
+  background:$background-color;
+  }
+  .c-footer_wrapper::after {
+    position: absolute;
+  top: 2.2rem;
+  left: 4rem;
+  width: 0;
+  height: 0;
+  content: "";
+  transform: rotate(90deg);
+  border-right: 3.2rem solid rgba(0,0,0,0);
+  border-bottom: 4rem solid $background-color;
+  border-left: 3.2rem solid rgba(0,0,0,0);
+  }
+
 }
