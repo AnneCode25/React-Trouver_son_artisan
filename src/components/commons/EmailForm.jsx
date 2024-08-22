@@ -38,7 +38,7 @@ const EmailForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="email-form">
       <input
         type="text"
         name="name"
