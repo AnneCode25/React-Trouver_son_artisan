@@ -13,7 +13,7 @@ const NotFoundPage = () => {
           className="img-fluid mb-4"
           style={{ maxWidth: "100%", width: "50em", height: "auto" }}        />
         <p className="lead mb-4">Page non trouvée</p>
-        <button>
+        <button className="button-error">
           <Link to="/">Retour à l&apos;accueil</Link>
         </button>
       </div>

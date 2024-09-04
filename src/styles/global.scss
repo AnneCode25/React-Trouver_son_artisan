@@ -1,22 +1,249 @@
-header { 
-        .search:hover {
-                cursor: pointer;
-        }
-
-        .search {
-                padding-right: 1rem     ;
-        }
-} 
+@import "fonts";
+@import "colors";
 
 body {
-        background-color: aquamarine;
+  font-family: $font-primary;
+  background-color: $background-color;
+  color: $color-texte;
 }
 
-footer { 
-        .list-inline-item a {
-                text-decoration: none;
-        }
-        .footer-link {
-                text-decoration: none;
-              }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-title;
+  color: $color-title;
+}
+
+header {
+  .search:hover {
+    cursor: pointer;
+  }
+
+  .search {
+    padding-right: 1rem;
+  }
+}
+
+footer {
+  background-color: $color-blue;
+
+  svg, h5, p, a, hr {
+    color: white !important;
+  }
+
+  h5 {
+    font-size: 1rem;
+    font-family: $font-title;
+  }
+
+  .list-inline-item a, li {
+    text-decoration: none;
+    color: $background-color !important;
+  }
+
+  .footer-link {
+    text-decoration: none;
+  }
+  .c-footer { 
+    margin-top:3rem;
+
+  }
+  .c-footer_wrapper {
+    position: relative;
+  z-index: 1;
+  padding-top: 9rem;
+  padding-bottom: 1rem;
+  }
+  .c-footer_wrapper::before {
+    position: absolute;
+  top: -1rem;
+  right: 0;
+  left: 0;
+  height: 6rem;
+  content: "";
+  border-radius: 0 0 10rem 10rem;
+  background:$background-color;
+  }
+  .c-footer_wrapper::after {
+    position: absolute;
+  top: 2.2rem;
+  left: 4rem;
+  width: 0;
+  height: 0;
+  content: "";
+  transform: rotate(90deg);
+  border-right: 3.2rem solid rgba(0,0,0,0);
+  border-bottom: 4rem solid $background-color;
+  border-left: 3.2rem solid rgba(0,0,0,0);
+  }
+  
+}
+// Page d'accueil
+.banner {
+  background-image: url("../assets/images/accueil.png");
+  background-size: cover;
+  background-position: center bottom;
+  min-height: 20vh;
+  position: relative;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+/* Banner Desktop */
+@media screen and (min-width: 1024px) {
+  .banner {
+    height: 50vh;
+    background-position: center 80%;
+
+  }
+}
+
+.titre-homepage {
+  font-size: 1.5rem;
+  background-color: $color-red;
+  color: white;
+  padding: 1.2rem;
+  position: relative;
+  display: inline-block; 
+}
+
+.titre-homepage::before {
+  content: "";
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+  width: 2rem;
+  height: 0.4rem;
+  background-color: white;
+}
+
+.how-it-works {
+  padding-bottom: 0rem !important;
+}
+
+// Page Artisan
+.contact {
+  font-size: 1.5rem;
+}
+
+// EmailForm
+// Variables de couleur
+$color-light-blue: #f1f8fc;
+$color-blue: #0074c7;
+$color-dark-blue: #00497c;
+$color-grey: #384050;
+$color-red: #cd2c2e;
+$color-green: #82b864;
+
+.email-form {
+  max-width: 500px;
+  margin: 2rem 0;
+  padding: 2rem;
+  background-color: $color-light-blue;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid $color-blue;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    color: $color-grey;
+
+    &:focus {
+      outline: none;
+      border-color: $color-dark-blue;
+      box-shadow: 0 0 0 0.2rem rgba($color-blue, 0.25);
+    }
+
+    &::placeholder {
+      color: lighten($color-grey, 30%);
+    }
+  }
+
+  textarea {
+    min-height: 150px;
+    resize: vertical;
+  }
+
+  button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: $color-blue;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+  }
+
+.email-form {
+  animation: fadeIn 0.5s ease-out;
+}
+
+// Media query pour les écrans plus petits
+@media (max-width: 768px) {
+  .email-form {
+    margin: 2rem auto;
+    padding: 1.5rem;
+  }
+}
+}
+
+// Page d'erreur
+.button-error {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: $color-blue;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $color-dark-blue;
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba($color-blue, 0.5);
+  }
+
+  a {
+    color: #ffffff;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+// Animation d'entrée pour le bouton
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.button-error {
+  animation: fadeInUp 0.5s ease-out 0.3s both;
 }

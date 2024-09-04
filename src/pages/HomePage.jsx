@@ -29,34 +29,40 @@ const HomePage = () => {
 
   return (
     <Layout>
-      <h1>Trouve ton artisan !</h1>
-      <section className="how-it-works py-5 bg-light">
+        <div className="banner"></div>
         <div className="container">
-          <h2 className="text-center mb-5">Comment ça marche</h2>
-          <div className="row">
-            {steps.map((step, index) => (
-              <div key={index} className="col-md-6 col-lg-3 mb-4">
-                <div className="card h-100 text-center shadow-sm">
-                  <div className="card-body d-flex flex-column justify-content-center">
-                    <div className="mb-3">
-                      <span className="bg-primary text-white rounded-circle p-3 d-inline-block">
-                        <FontAwesomeIcon icon={step.icon} size="2x" />
-                      </span>
+
+        <div className="homepage-content-wrapper">
+          <h1 className="titre-homepage">Trouve ton artisan !</h1>
+          <section className="how-it-works py-5">
+            <div className="container">
+              <h2 className="text-center mb-5">Comment ça marche</h2>
+              <div className="row">
+                {steps.map((step, index) => (
+                  <div key={index} className="col-md-6 col-lg-3 mb-4">
+                    <div className="card h-100 text-center shadow-sm">
+                      <div className="card-body d-flex flex-column justify-content-center">
+                        <div className="mb-3">
+                          <span className="bg-primary text-white rounded-circle p-3 d-inline-block">
+                            <FontAwesomeIcon icon={step.icon} size="2x" />
+                          </span>
+                        </div>
+                        <h5 className="card-title">{step.title}</h5>
+                        <p className="card-text">{step.description}</p>
+                      </div>
+                      <div className="card-footer bg-white border-0">
+                        <span className="text-primary font-weight-bold">
+                          Étape {index + 1}
+                        </span>
+                      </div>
                     </div>
-                    <h5 className="card-title">{step.title}</h5>
-                    <p className="card-text">{step.description}</p>
                   </div>
-                  <div className="card-footer bg-white border-0">
-                    <span className="text-primary font-weight-bold">
-                      Étape {index + 1}
-                    </span>
-                  </div>
-                </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </div>
+          </section>
         </div>
-      </section>
+      </div>
       <ArtisansDuMois />
     </Layout>
   );

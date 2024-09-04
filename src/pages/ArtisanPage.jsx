@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Layout from '../components/layout/Layout';
-import StarRating from '../components/commons/StarRating'; // Assurez-vous que le chemin est correct
-import data from '../data/datas.json'; // Assurez-vous que le chemin est correct
+import StarRating from '../components/commons/StarRating'; 
+import data from '../data/datas.json'; 
 import EmailForm from "../components/commons/EmailForm";
 
 const ArtisanPage = () => {
@@ -31,7 +31,7 @@ const ArtisanPage = () => {
         <p><strong>À propos:</strong> {artisan.about}</p>
         <p><strong>Site web:</strong> <a href={artisan.website} target="_blank" rel="noopener noreferrer">{artisan.website}</a></p>
         
-        <h2 className="mt-4">Contactez {artisan.name}</h2>
+        <h2 className="mt-4 contact">Contactez votre artisan :</h2>
         <EmailForm />
       </div>
     </Layout>
